@@ -1,0 +1,20 @@
+server:
+  port: 80999
+  servlet:
+    context-path: /redis-api
+spring:
+  # redis配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    database: 0
+
+    jedis:
+      pool:
+        max-active: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+      timeout: 2000ms
